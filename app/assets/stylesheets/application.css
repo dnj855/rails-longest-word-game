@@ -13,3 +13,33 @@
  *= require_tree .
  *= require_self
  */
+
+.letter-grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 15px;
+}
+
+.letter-grid li {
+  display: flex;
+  height: 3rem;
+  width: 3rem;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 1.3rem;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.answer {
+  font-size: 1.2rem;
+}
+
+.link {
+  text-decoration: none;
+}

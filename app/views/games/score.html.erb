@@ -1,0 +1,14 @@
+<h1 class="display-6">Result</h1>
+<% case @result[:failure] %>
+<% when :dictionary %>
+<p class="answer">Sorry but <strong><%= @result[:attempt] %></strong> does not seem to be a valid English word...</p>
+<% when :grid || :overused %>
+<p class="answer">Sorry but <strong><%= @result[:attempt] %></strong> can't be built out of <%= @result[:grid] %></p>
+<% else %>
+<p class="answer"><strong>Congratulations!</strong> <%= @result[:attempt] %> is a valid English word! You get <%= @result[:score] %> points reward!</p>
+<% end %>
+<p>Your total score is <strong><%= session[:current_score] %></strong>!
+
+<div class="mt-2">
+  <%= link_to "Play again", "new", class: "link" %>
+</div>
